@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<content-type>/component/item</content-type>
+	<display-template/>
+	<no-template-required>true</no-template-required>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>017a</objectGroupId>
+	<objectId>017a312f-262d-f86c-5e98-925088226777</objectId>
+	<internal-name>Item 2</internal-name>
+	<text_s>Item 2</text_s>
+	<file-name>017a312f-262d-f86c-5e98-925088226777.xml</file-name>
+	<folder-name/>
+	<createdDate>2024-06-19T22:12:21.194Z</createdDate>
+	<createdDate_dt>2024-06-19T22:12:21.194Z</createdDate_dt>
+	<lastModifiedDate>2024-06-19T22:12:21.194Z</lastModifiedDate>
+	<lastModifiedDate_dt>2024-06-19T22:12:21.194Z</lastModifiedDate_dt>
+</component>
