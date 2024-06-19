@@ -502,7 +502,7 @@
 						</property>
 						<property>
 							<name>itemManager</name>
-							<value></value>
+							<value>itemsDS</value>
 							<type>datasource:item</type>
 						</property>
 						<property>
@@ -662,6 +662,54 @@
 						<property>
 							<name>contentTypes</name>
 							<value>*</value>
+								<type>contentTypes</type>
+						</property>
+						<property>
+							<name>tags</name>
+							<value></value>
+								<type>string</type>
+						</property>
+					</properties>
+				</datasource>
+				<datasource>
+					<type>components</type>
+					<id>itemsDS</id>
+					<title>ItemsDS</title>
+					<interface>item</interface>
+					<properties>
+						<property>
+							<name>allowEmbedded</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>allowShared</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableBrowse</name>
+							<value>true</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>enableSearch</name>
+							<value>false</value>
+								<type>boolean</type>
+						</property>
+						<property>
+							<name>baseRepoPath</name>
+							<value>/site/components</value>
+								<type>string</type>
+						</property>
+						<property>
+							<name>baseBrowsePath</name>
+							<value>/site/components</value>
+								<type>string</type>
+						</property>
+						<property>
+							<name>contentTypes</name>
+							<value>/component/item</value>
 								<type>contentTypes</type>
 						</property>
 						<property>
