@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
-	<content-type>/page/app</content-type>
-	<display-template>/templates/web/app.ftl</display-template>
-	<no-template-required>true</no-template-required>
-	<merge-strategy>inherit-levels</merge-strategy>
-	<placeInNav>false</placeInNav>
-	<file-name>index.xml</file-name>
-	<internal-name>Home</internal-name>
-	<orderDefault_f>-1</orderDefault_f>
-	<objectGroupId>8d7f</objectGroupId>
-	<objectId>8d7f21fa-5e09-00aa-8340-853b7db302da</objectId>
-	<folder-name/>
-	<createdDate>2023-09-08T04:22:05.987Z</createdDate>
-	<createdDate_dt>2023-09-08T04:22:05.987Z</createdDate_dt>
-	<lastModifiedDate>2024-06-19T22:46:13.104Z</lastModifiedDate>
-	<lastModifiedDate_dt>2024-06-19T22:46:13.104Z</lastModifiedDate_dt>
-	<navLabel>Home</navLabel>
-	<headText_s>Welcome to Your React Application on CrafterCMS Project.</headText_s>
-	<logo_s>/static-assets/images/logo.svg</logo_s>
-	<subtitle_s>Edit sources/packages/app/src/App.tsx and save.</subtitle_s>
-	<body_html>&lt;p&gt;This site blueprint is the equivalent of a Create React App. It's a blank slate React application which you can build your own digital experience.&lt;/p&gt;
+  <content-type>/page/app</content-type>
+  <display-template>/templates/web/app.ftl</display-template>
+  <no-template-required>true</no-template-required>
+  <merge-strategy>inherit-levels</merge-strategy>
+  <placeInNav>false</placeInNav>
+  <file-name>index.xml</file-name>
+  <internal-name>Home</internal-name>
+  <orderDefault_f>-1</orderDefault_f>
+  <objectGroupId>8d7f</objectGroupId>
+  <objectId>8d7f21fa-5e09-00aa-8340-853b7db302da</objectId>
+  <folder-name/>
+  <createdDate>2023-09-08T04:22:05.987Z</createdDate>
+  <createdDate_dt>2023-09-08T04:22:05.987Z</createdDate_dt>
+  <lastModifiedDate>2024-06-19T22:46:13.104Z</lastModifiedDate>
+  <lastModifiedDate_dt>2024-06-19T22:53:57.763Z</lastModifiedDate_dt>
+  <navLabel>Home</navLabel>
+  <headText_s>Welcome to Your React Application on CrafterCMS Project.</headText_s>
+  <logo_s>/static-assets/images/logo.svg</logo_s>
+  <subtitle_s>Edit sources/packages/app/src/App.tsx and save.</subtitle_s>
+  <body_html>&lt;p&gt;This site blueprint is the equivalent of a Create React App. It's a blank slate React application which you can build your own digital experience.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;To create new content types use the Project Tools &amp;gt; Content Types menu on the left Sidebar&lt;/li&gt;
 &lt;li&gt;To update markup, edit this template by clicking on the Options menu on the top toolbar and select "Edit Template"&lt;/li&gt;
@@ -27,28 +27,50 @@
 &lt;li&gt;Crafter documentation can be found &lt;a class="App-link" href="https://docs.craftercms.org" target="_blank" rel="noopener noreferrer"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;CrafterCMS authoring and developer training is available. Please contact &lt;a class="App-link" href="mailto:info@craftercms.com"&gt;info@craftercms.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</body_html>
-	<bullets_o item-list="true">	<item>	<title_t>bbbb</title_t>
-	<text_t>This is a sample!</text_t>
-	</item></bullets_o>
-	<title_s>Sample Bullets</title_s>
-	<repGroupItems_o item-list="true">	<item>	<items_o item-list="true">	<item>	<key>/site/components/2dd1af12-d000-5f14-f1ae-5c926b7fcee3.xml</key>
-	<value>Item 1</value>
-	<include>/site/components/2dd1af12-d000-5f14-f1ae-5c926b7fcee3.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></items_o>
-	</item>	<item>	<items_o item-list="true">	<item>	<key>/site/components/017a312f-262d-f86c-5e98-925088226777.xml</key>
-	<value>Item 2</value>
-	<include>/site/components/017a312f-262d-f86c-5e98-925088226777.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></items_o>
-	</item></repGroupItems_o>
-	<items2_o item-list="true">	<item>	<key>/site/components/435046e1-7dde-ad75-57fb-11ca030c534d.xml</key>
-	<value>Item 2-1</value>
-	<include>/site/components/435046e1-7dde-ad75-57fb-11ca030c534d.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item>	<item>	<key>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</key>
-	<value>Item2-2</value>
-	<include>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</include>
-	<disableFlattening>false</disableFlattening>
-	</item></items2_o>
+  <bullets_o item-list="true">
+    <item>
+      <title_t>bbbb</title_t>
+      <text_t>This is a sample!</text_t>
+    </item>
+    <item>
+      <text_t/>
+    </item>
+  </bullets_o>
+  <title_s>Sample Bullets</title_s>
+  <repGroupItems_o item-list="true">
+    <item>
+      <items_o item-list="true">
+        <item>
+          <key>/site/components/2dd1af12-d000-5f14-f1ae-5c926b7fcee3.xml</key>
+          <value>Item 1</value>
+          <include>/site/components/2dd1af12-d000-5f14-f1ae-5c926b7fcee3.xml</include>
+          <disableFlattening>false</disableFlattening>
+        </item>
+      </items_o>
+    </item>
+    <item>
+      <items_o item-list="true">
+        <item>
+          <key>/site/components/017a312f-262d-f86c-5e98-925088226777.xml</key>
+          <value>Item 2</value>
+          <include>/site/components/017a312f-262d-f86c-5e98-925088226777.xml</include>
+          <disableFlattening>false</disableFlattening>
+        </item>
+      </items_o>
+    </item>
+  </repGroupItems_o>
+  <items2_o item-list="true">
+    <item>
+      <key>/site/components/435046e1-7dde-ad75-57fb-11ca030c534d.xml</key>
+      <value>Item 2-1</value>
+      <include>/site/components/435046e1-7dde-ad75-57fb-11ca030c534d.xml</include>
+      <disableFlattening>false</disableFlattening>
+    </item>
+    <item>
+      <key>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</key>
+      <value>Item2-2</value>
+      <include>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</include>
+      <disableFlattening>false</disableFlattening>
+    </item>
+  </items2_o>
 </page>
