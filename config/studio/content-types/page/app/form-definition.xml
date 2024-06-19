@@ -538,9 +538,9 @@
 				</field>
 				<field>
 					<type>node-selector</type>
-					<id>items_o</id>
+					<id>items2_o</id>
 					<iceId></iceId>
-					<title>Items</title>
+					<title>Items2</title>
 					<description></description>
 					<defaultValue></defaultValue>
 					<help></help>
