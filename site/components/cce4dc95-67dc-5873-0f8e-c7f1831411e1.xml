@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component>
-	<content-type>/component/item2</content-type>
-	<display-template/>
-	<no-template-required>true</no-template-required>
-	<merge-strategy>inherit-levels</merge-strategy>
-	<objectGroupId>cce4</objectGroupId>
-	<objectId>cce4dc95-67dc-5873-0f8e-c7f1831411e1</objectId>
-	<file-name>cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</file-name>
-	<folder-name/>
-	<internal-name>Item2-2</internal-name>
-	<repGroup_o item-list="true">	<item>	<text_s>text33</text_s>
-	</item>	<item>	<text_s>text44</text_s>
-	</item></repGroup_o>
-	<createdDate>2024-06-19T22:46:40.776Z</createdDate>
-	<createdDate_dt>2024-06-19T22:46:40.776Z</createdDate_dt>
-	<lastModifiedDate>2024-06-19T22:46:40.776Z</lastModifiedDate>
-	<lastModifiedDate_dt>2024-06-19T22:46:40.776Z</lastModifiedDate_dt>
+  <content-type>/component/item2</content-type>
+  <display-template/>
+  <no-template-required>true</no-template-required>
+  <merge-strategy>inherit-levels</merge-strategy>
+  <objectGroupId>cce4</objectGroupId>
+  <objectId>cce4dc95-67dc-5873-0f8e-c7f1831411e1</objectId>
+  <file-name>cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</file-name>
+  <folder-name/>
+  <internal-name>Item2-2</internal-name>
+  <repGroup_o item-list="true">
+    <item>
+      <text_s>text33</text_s>
+    </item>
+    <item>
+      <text_s>text44</text_s>
+    </item>
+    <item>
+      <text_s/>
+    </item>
+  </repGroup_o>
+  <createdDate>2024-06-19T22:46:40.776Z</createdDate>
+  <createdDate_dt>2024-06-19T22:46:40.776Z</createdDate_dt>
+  <lastModifiedDate>2024-06-19T22:46:40.776Z</lastModifiedDate>
+  <lastModifiedDate_dt>2024-06-19T22:57:50.993Z</lastModifiedDate_dt>
 </component>
