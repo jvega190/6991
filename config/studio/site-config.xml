@@ -27,7 +27,7 @@
 
     <!-- Site URLs. Default to http://localhost:8080 if blank -->
     <site-urls>
-        <authoring-url>http://localhost:3000</authoring-url>
+        <authoring-url></authoring-url>
         <staging-url></staging-url>
         <live-url></live-url>
     </site-urls>
