@@ -14,7 +14,7 @@
   <createdDate>2023-09-08T04:22:05.987Z</createdDate>
   <createdDate_dt>2023-09-08T04:22:05.987Z</createdDate_dt>
   <lastModifiedDate>2024-06-19T22:46:13.104Z</lastModifiedDate>
-  <lastModifiedDate_dt>2024-06-20T15:51:19.417Z</lastModifiedDate_dt>
+  <lastModifiedDate_dt>2024-06-20T15:51:25.034Z</lastModifiedDate_dt>
   <navLabel>Home</navLabel>
   <headText_s>Welcome to Your React Application on CrafterCMS Project.</headText_s>
   <logo_s>/static-assets/images/logo.svg</logo_s>
@@ -58,15 +58,15 @@
   </repGroupItems_o>
   <items2_o item-list="true">
     <item>
-      <key>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</key>
-      <value>Item2-2</value>
-      <include>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</include>
-      <disableFlattening>false</disableFlattening>
-    </item>
-    <item>
       <key>/site/components/435046e1-7dde-ad75-57fb-11ca030c534d.xml</key>
       <value>Item 2-1</value>
       <include>/site/components/435046e1-7dde-ad75-57fb-11ca030c534d.xml</include>
+      <disableFlattening>false</disableFlattening>
+    </item>
+    <item>
+      <key>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</key>
+      <value>Item2-2</value>
+      <include>/site/components/cce4dc95-67dc-5873-0f8e-c7f1831411e1.xml</include>
       <disableFlattening>false</disableFlattening>
     </item>
   </items2_o>
