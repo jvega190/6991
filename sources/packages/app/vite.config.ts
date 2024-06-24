@@ -13,6 +13,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       host: true
     },
     build: {
+      sourcemap: 'inline',
       emptyOutDir: true,
       outDir: '../../../static-assets/app',
       minify: true
