@@ -14,7 +14,7 @@
   <createdDate>2023-09-08T04:22:05.987Z</createdDate>
   <createdDate_dt>2023-09-08T04:22:05.987Z</createdDate_dt>
   <lastModifiedDate>2024-06-24T14:45:38.066Z</lastModifiedDate>
-  <lastModifiedDate_dt>2024-06-24T16:57:38.479Z</lastModifiedDate_dt>
+  <lastModifiedDate_dt>2024-06-24T16:57:41.097Z</lastModifiedDate_dt>
   <navLabel>Home</navLabel>
   <headText_s>Welcome to Your React Application on CrafterCMS Project.</headText_s>
   <logo_s>/static-assets/images/logo.svg</logo_s>
@@ -122,14 +122,6 @@
         </item>
         <item>
           <text_t>subItem3!</text_t>
-        </item>
-      </subRepGroup1_o>
-    </item>
-    <item>
-      <text_t/>
-      <subRepGroup1_o item-list="true">
-        <item>
-          <text_t/>
         </item>
       </subRepGroup1_o>
     </item>
