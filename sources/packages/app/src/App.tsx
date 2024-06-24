@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { ExperienceBuilder, RenderField, useGuestContext, RenderRepeat } from '@craftercms/experience-builder/react';
+import { ExperienceBuilder, RenderField, useGuestContext, RenderRepeat, RenderComponents } from '@craftercms/experience-builder/react';
 import { ContentInstance } from '@craftercms/models';
 import { getModel } from './lib/api';
 import { BASE_URL } from './constants';
@@ -17,49 +17,116 @@ function Header(props: ContentProps) {
 
   return (
     <header className="App-header">
+      <h4>Simple repeating group</h4>
       <RenderRepeat
-          model={model}
-          fieldId="bullets_o"
-          component={"ul"}
-          renderItem={(item: ContentInstance, index: number) => (
-            <li>
-              <RenderField
-                model={model}
-                fieldId="bullets_o.text_t" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
-                index={index} // We also need to let the component know the index of the field inside the rep group being rendered
-                render={() => {
-                  return <div>{item.text_t}</div>;
-                }}
-              />
-            </li>
-          )}
-        />
-      <RenderField model={model} fieldId="headText_s" component="p" />
-      <RenderField
         model={model}
-        fieldId="logo_s"
-        renderTarget="src"
-        component="img"
-        componentProps={{
-          className: `App-logo ${editMode ? '' : 'App-logo-spin'}`,
-          alt: 'logo'
-        }}
-        render={(logo) => `${BASE_URL}${logo}`}
+        fieldId="bullets_o"
+        component={"ul"}
+        renderItem={(item: ContentInstance, index: number) => (
+          <li>
+            <RenderField
+              model={model}
+              fieldId="bullets_o.text_t" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
+              index={index} // We also need to let the component know the index of the field inside the rep group being rendered
+              render={() => {
+                return <div>{item.text_t}</div>;
+              }}
+            />
+          </li>
+        )}
       />
-      <RenderField model={model} fieldId="subtitle_s" component="p" />
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
-      <div>
-        <div className="App-note">
-          <RenderField
-            model={model}
-            fieldId="body_html"
-            renderTarget="dangerouslySetInnerHTML"
-            render={(value) => ({ __html: value })}
-          />
-        </div>
-      </div>
+
+      --------------------------------
+
+      <h4>Repeat group with node-selectors inside</h4>
+      <RenderRepeat
+        model={model}
+        fieldId="repGroupItems_o"
+        renderItem={(item: ContentInstance, index: number) => {
+          return <li>rep group item {index} <br/>
+            <RenderField
+              model={model}
+              fieldId="repGroupItems_o.items_o" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
+              index={index} // We also need to let the component know the index of the field inside the rep group being rendered
+              render={() => {
+                return <RenderComponents
+                  model={model}
+                  fieldId="repGroupItems_o.items_o"
+                  index={index}
+                  renderItem={(item: ContentInstance) => {
+                    return <RenderField
+                      model={item}
+                      fieldId="text_s" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
+                      render={() => {
+                        return <div>{item.text_s}</div>;
+                      }}
+                    />;
+                  }}
+                />
+              }}
+            />
+          </li>
+        }}
+      />
+
+      --------------------------------
+
+      <h4>Node selector with repeating groups inside</h4>
+      <RenderComponents
+        model={model}
+        fieldId="items2_o"
+        renderItem={(component: ContentInstance, index) => {
+          return <><p>component {index}</p><RenderRepeat
+            model={component}
+            fieldId="repGroup_o"
+            component={"ul"}
+            renderItem={(item: ContentInstance, index: number) => (
+              <li>rep group item {index}
+                <RenderField
+                  model={component}
+                  fieldId="repGroup_o.text_t" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
+                  index={index} // We also need to let the component know the index of the field inside the rep group being rendered
+                  render={() => {
+                    return <div>{item.text_s}</div>;
+                  }}
+                />
+              </li>
+            )}
+          /></>;
+        }}
+      />
+
+      --------------------------------
+
+      <h4>Nested repeating groups</h4>
+      <RenderRepeat
+        model={model}
+        fieldId="repGroup1_o"
+        component={"ul"}
+        renderItem={(item: ContentInstance, index: number) => (
+          <li>
+            <RenderField
+              model={model}
+              fieldId="repGroup1_o.text_t" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
+              index={index} // We also need to let the component know the index of the field inside the rep group being rendered
+              render={() => {
+                return <>
+                  <div>{item.text_t} - {index}</div>
+                  <RenderRepeat
+                    model={model}
+                    fieldId="repGroup1_o.subRepGroup1_o"
+                    index={index}
+                    component={"ul"}
+                    renderItem={(item: ContentInstance, index: number) => (
+                      <div>{item.text_t} - {index}</div>
+                    )}
+                  />
+                </>;
+              }}
+            />
+          </li>
+        )}
+      />
     </header>
   );
 }
@@ -77,6 +144,7 @@ function App() {
     <Suspense fallback={<div />}>
       <div className="App" role="main">
         {model && (
+          // @ts-ignore
           <ExperienceBuilder isAuthoring={isAuthoring()} path={model.craftercms?.path}>
             <Header model={model} />
           </ExperienceBuilder>
