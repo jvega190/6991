@@ -41,9 +41,11 @@ function Header(props: ContentProps) {
                   />
                 </li>
               )}
+              itemKeyGenerator={(itm, subIndex) => `subRepGroup.${index}.${subIndex}`}
             />
           </li>
         )}
+        itemKeyGenerator={(itm, index) => `subRepGroup.${index}`}
       />
     </header>
   );
