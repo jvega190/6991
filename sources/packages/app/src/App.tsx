@@ -17,31 +17,29 @@ function Header(props: ContentProps) {
 
   return (
     <header className="App-header">
-      <h4>Nested repeating groups</h4>
+      <h1>Nested repeating groups</h1>
       <RenderRepeat
         model={model}
         fieldId="repGroup1_o"
-        component={"ul"}
+        component="ul"
         renderItem={(item: ContentInstance, index: number) => (
-          <li>
-            <RenderField
+          <li style={{display: 'block'}}>
+            <h2>Repeat group - Item {index}</h2>
+            <RenderField model={model} fieldId="repGroup1_o.text_t" index={index}/>
+            <RenderRepeat
               model={model}
-              fieldId="repGroup1_o.text_t" // That way the component knows that the field we are rendering is 'text_t' from 'bullets_o'
-              index={index} // We also need to let the component know the index of the field inside the rep group being rendered
-              render={() => {
-                return <>
-                  <div>{item.text_t} - {index}</div>
-                  <RenderRepeat
-                    model={model}
-                    fieldId="repGroup1_o.subRepGroup1_o"
-                    index={index}
-                    component={"ul"}
-                    renderItem={(item: ContentInstance, index: number) => (
-                      <div>{item.text_t} - {index}</div>
-                    )}
+              index={index}
+              fieldId="repGroup1_o.subRepGroup1_o"
+              component="ul"
+              renderItem={(subitem: ContentInstance, subindex: number) => (
+                <li>
+                  <h3>Repeat 2 - Item {index}.{subindex}</h3>
+                  <RenderField
+                    model={model} fieldId="repGroup1_o.subRepGroup1_o.text_t"
+                    index={`${index}.${subindex}`}
                   />
-                </>;
-              }}
+                </li>
+              )}
             />
           </li>
         )}
@@ -60,12 +58,12 @@ function App() {
   }, []);
 
   return (
-    <Suspense fallback={<div />}>
+    <Suspense fallback={<div/>}>
       <div className="App" role="main">
         {model && (
           // @ts-ignore
           <ExperienceBuilder isAuthoring={isAuthoring()} path={model.craftercms?.path}>
-            <Header model={model} />
+            <Header model={model}/>
           </ExperienceBuilder>
         )}
       </div>
