@@ -31,12 +31,13 @@ function Header(props: ContentProps) {
               index={index}
               fieldId="repGroup1_o.subRepGroup1_o"
               component="ul"
-              renderItem={(subitem: ContentInstance, subindex: number) => (
+              renderItem={(subitem: ContentInstance, subItemIndex: number) => (
                 <li>
-                  <h3>Repeat 2 - Item {index}.{subindex}</h3>
+                  <h3>Repeat 2 - Item {subItemIndex}</h3>
                   <RenderField
-                    model={model} fieldId="repGroup1_o.subRepGroup1_o.text_t"
-                    index={`${index}.${subindex}`}
+                    model={model}
+                    fieldId="repGroup1_o.subRepGroup1_o.text_t"
+                    index={subItemIndex}
                   />
                 </li>
               )}
